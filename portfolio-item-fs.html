@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Umang's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo-website.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Linux<strong>File System</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">virtual file system</p>
+            <img src="img/FileSystem.png" alt="File System" class="intro__img">
+        </section>
+
+        <div class="portfoflio-item-individual">
+            <p>A new virtual file system called 'PantryFS' was implemented and added to the Linux Kernel called 'PantryFS'. The following diagram describes the various data structures that are used for the implementation of the file system and how these data structures interact with each other:
+            </p>
+            <img src="img/pantryfs.svg" alt="PantryFS">
+            <p>The file system has the following features:
+                <ul>
+                    <li>Each block is 4096 bytes.</li>
+                    <li>The pantryfs inode stores metadata about a file or a directory.</li>
+                    <li>Each pantryfs inode is associated with a single data block and each data block stores file or directory contents.</li>
+                    <li>The file system supports operations like: listing the contents of directory, accessing subdirectories, reading contents of regular files,
+                        writing on files, overwriting existing files, creating new files and deleting files </li>
+                </ul>
+            </p>
+            <p>The project was undertaken as a part of the course 'Operating Systems' offered at Columbia University. The project was implemented in C language and was done in a team of 2 members comprising of Jay Karp and Umang Raj.</p>
+            <p>The GitHub repository of the project cannot be made public, owing to the course policy. For more details, please send Umang Raj an email at ur2136@columbia.edu.</p>
+            <p>
+                References: Image taken from assignment specification provided by Professor Jae Wo Lee as a part of the course COMS-4118 (Operating Systems).
+            </p>
+        </div>
+        
+
+        
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:ur2136@columbia.edu" class="footer__link">ur2136@columbia.edu</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="https://github.com/ur2136"><i class="fab fa-github"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/umang-raj
+                    "><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/7317bdeef8.js" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

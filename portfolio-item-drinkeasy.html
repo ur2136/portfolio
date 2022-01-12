@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevJane Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo-website.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Drink<strong>Easy</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">web app</p>
+            <img src="img/DrinkEasy.png" alt="DrinkEasy Picture" class="intro__img">
+        </section>
+
+        <div class="portfoflio-item-individual">
+            <p>DrinkEasy is a serverless, event-driven, scalable web application designed to make socializing easier for NYC. The application collects data about bars/clubs near the user or a location of the user’s choice and makes smart suggestions based on relevant filtering criteria such as the level of crowdedness, operating times, user reviews, ratings and lgbtq friendliness.
+                The aim here is to empower the users to make efficient and faster decisions about the places that they want to visit based on the most important parameters. The following diagram describes the architecture of the application:
+            </p>
+            <img src="img/drinkeasy-architecture.png" alt="drinkeasy architecture">
+            <br/>
+            <p>The following screenshots have been taken from the live application that was hosted on an AWS S3 bucket:</p>
+            <img src="img/drinkeasy-ss1.png" alt="drinkeasy explore tab">
+            <br/>
+            <img src="img/drinkeasy-ss2.png" alt="drinkeasy cards">
+            <br/>
+            <img src="img/drinkeasy-ss3.png" alt="drinkeasy categories tab">
+            <br/>
+            <img src="img/drinkeasy-ss4.png" alt="drinkeasy favorites tab">
+            <p>The application supports the following features:
+                <ul>
+                    <li>ZipCode based search query for finding establishments in that particular area.
+                    </li>
+                    <li>Filtering of establishments based on LGBTQ friendliness, ratings, price range.</li>
+                    <li>Filtering of establishments based on crowdedness level, date of visit and time of visit </li>
+                    <li>Categorization of establishments into ‘Trending Places’ (based on their crowdedness level: establishments that are fairly crowded are placed into this category)
+                    </li>
+                    <li>Categories of establishments into ‘Top Rated Brands’ (based on their ratings: establishments that are rated 4 and above are placed into this category)</li>
+                    <li>Displaying search results in the form of intuitive and easy to read cards with all the relevant information like Name, Price Range, Rating, Contact Number and Crowdedness Level.</li>
+                    <li>Embedded Google Maps link in each card to take the user to the google maps link corresponding to the establishment.</li>
+                    <li>Categorization of establishments into ‘trendy’ categories like LGBTQ bars, Jazz Bars, Sports Bars and Nightclubs for easy access.</li>
+                    <li>Feature to add or remove establishments from ‘Favourites’ : This will enable users to have a consolidated list of all the places that they have liked and will help them make faster and efficient decisions, the next time they plan an outing.</li>
+                </ul>
+            </p>
+            <p>The frontend was designed using ReactJS. 
+                The backend was written using AWS Lambda Functions (in Python) and AWS DynamoDB was used for database storage and management.
+                Various external APIs such as Google Places, Google Maps, Google Images and Best Times have been used in the application.
+            </p>
+            <p>The project was undertaken as a part of the course 'Cloud Computing & Big Data' offered at Columbia University. The project was done in a team of 4 members comprising of Umang Raj, Katie Kim, Chandan Suri and Viswajit Vinod Nair.</p>
+            <p>The GitHub repository of the project is <a href="https://github.com/ur2136/DrinkEasy">DrinkEasy.</a></p>
+        </div>
+        
+
+        
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:ur2136@columbia.edu" class="footer__link">ur2136@columbia.edu</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="https://github.com/ur2136"><i class="fab fa-github"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/umang-raj
+                    "><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/7317bdeef8.js" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

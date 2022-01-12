@@ -268,7 +268,6 @@ header {
 
 .my-skills {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.png);
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -432,9 +431,9 @@ header {
     padding: .5em;
 }
 
-.container {
+.technologies {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -449,30 +448,102 @@ header {
     cursor: pointer;
 }
 
+.skill-box:hover > .skill-title::after, .skill-box:hover > .skill-title::before {
+    width: 35px;
+}
+
+.skill-box:hover .img {
+    transform: translateY(-10px);
+}
+
 .skill-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+    position: relative;
 }
 
-.skill-title img {
+.skill-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: var(--clr-accent);
+    transition: .5s;
+}
+
+.skill-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: var(--clr-accent);
+    transition: .5s;
+}
+
+.img {
     width: 90px;
     height: 90px;
     position: relative;
     border-radius: 45px;
-    background-color: #fff;
+    background-color: var(--clr-light);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s;
+}
+
+.img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
 }
 
 .skill-title h3 {
-    color: var(--clr-accent);
-    margin: 0.5rem;
+    color: var(--clr-light);
+    margin-top: 0.5rem;
 }
 
 .skill-icon {
     width: 50px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 990px) {
+    .technologies{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .technologies{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }

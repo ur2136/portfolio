@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevJane Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo-website.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Columbia<strong>Chat</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">chat application</p>
+            <img src="img/ColumbiaChat.png" alt="" class="intro__img">
+        </section>
+
+        <div class="portfoflio-item-individual">
+            <p>A simple web-based messaging application exclusively for Columbia affiliates that serves as a one-stop solution
+                for all communication needs. The application aims to eliminate the need of using multiple messaging apps 
+                for exchanging information. The following screenshots have been taken from the live application that is hosted using Heroku:
+            </p>
+            <img src="img/columbiachat-ss1.png" alt="columbia chat discoverable groups">
+            <br/>
+            <img src="img/columbiachat-ss2.png" alt="columbia chat create groups">
+            <br/>
+            <img src="img/columbiachat-ss3.png" alt="columbia chat messaging">
+            <p>The features implemented as a part of the app are:
+                <ul>
+                    <li>SignUp functionality for users to sign up using full name, username, email and password. The page also contains basic validation checks to ensure uniqueness of usernames, for LionMail authentication and for password matching.</li>
+                    <li>LionMail Verification: Every user who signs up using their Lionmail receives a verification link on their email address. An attempt to sign up using a non-Lionmail account will not be successful. Upon clicking on the verification link, an account is created for them on the ColumbiaChat platform.</li>
+                    <li>SignIn functionality for users to sign into the chat application using username and password.</li>
+                    <li>One to One Chat functionality from one user to another user shown under the ‘Direct Messages’ navbar.</li>
+                    <li>Create Public Groups (Discoverable to All): Create groups that are visible to all users who have signed up on the application.</li>
+                    <li>Create Public Groups (Discoverable within a Certain Radius): Create groups that are discoverable only by users who are currently signed in within the radius.</li>
+                    <li>Create Private Groups with only certain users: Create groups that only contain selected users being added as group members.</li>
+                    <li>Public Course Groups and filtering using Department Code: Course groups are available on the application that have been populated using the course data available from SSOL(Columbia's academic portal). These groups cannot be created manually by users.</li>
+                </ul>
+            </p>
+            <p>The frontend has been designed HTML, CSS and Javascript. The backend has been implemented using Ruby on Rails. Unit and Integration tests have been written in RSpec whereas Cucumber has been used to test different user scenarios. Test coverage of 100% has been achieved on the application.</p>
+            <p>The project was undertaken as a part of the course 'Engineering Software as a Service' offered at Columbia University. The project was done in a team of 4 members comprising of Umang Raj, Chinmay Garg, Sounak Ray and Harrison Groll.</p>
+            <p>The GitHub repository of the project is <a href="https://github.com/ur2136/ColumbiaChat">Columbia Chat.</a></p>
+        </div>
+        
+
+        
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:ur2136@columbia.edu" class="footer__link">ur2136@columbia.edu</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="https://github.com/ur2136"><i class="fab fa-github"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/umang-raj
+                    "><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/7317bdeef8.js" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
